@@ -12,6 +12,9 @@ app.use(cors ({
 }))
 
 app.use("/data", userRoutes)
+app.get("/", (req, res)=>{
+    res.send({msg: "Home Page"})
+})
 
 const ConnectToServer = async()=>{
     try{
